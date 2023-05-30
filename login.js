@@ -131,6 +131,7 @@ const counter = document.getElementById('counter')
 const faqSection = document.getElementById('faqSection')
 const amount = document.getElementById('amount')
 const simplyAmount = document.getElementsByClassName('simply-amount')[0]
+const infoUser = document.getElementById('infoUser')
 
 const dataName = document.getElementById('dataName')
 const dataCourse = document.getElementById('dataCourse')
@@ -191,6 +192,8 @@ const login = () => {
         main.classList.add('hide')
         counter.classList.remove('hide')
         faqSection.classList.remove('hide')
+        infoUser.classList.remove('hide')
+
         fechaDeInicio.textContent = usuarioEncontrado.fechaInicio
         console.log(usuarioEncontrado.dia)
         amount.textContent = parseInt(simplyAmount.textContent) + 1
