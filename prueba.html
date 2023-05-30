@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cruz</title>
+  <style>
+    .cruz {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      transform: rotate(45deg);
+    }
+    
+    .cruz:before,
+    .cruz:after {
+      content: "";
+      position: absolute;
+      background-color: black;
+    }
+    
+    .cruz:before {
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 10px;
+      transform: translateY(-50%);
+    }
+    
+    .cruz:after {
+      left: 50%;
+      top: 0;
+      width: 10px;
+      height: 100%;
+      transform: translateX(-50%);
+    }
+  </style>
+</head>
+<body>
+  <div class="cruz"></div>
+</body>
+</html>

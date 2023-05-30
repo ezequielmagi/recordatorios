@@ -1,0 +1,338 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root{
+    --azul-itc: #0356F4;
+    --celeste-itc: #E4EDFE;
+    --blanco-itc: #FFF
+}
+
+.hide{
+    display: none;
+}
+
+
+header:first-of-type{
+    display: flex;
+    padding: 1em;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header img{
+    width: 25px;
+}
+
+
+nav ul{
+    display: none;
+}
+
+.nav-hamburguer_button--closed{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 27px;
+    width: 34px;
+}
+.nav-hamburguer_button--open{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 27px;
+    width: 34px;
+}
+
+.nav-hamburguer_button--open .hamburguer-button-element:nth-child(1){
+    transform: rotate(45deg); transform-origin: 10 0;
+    width: 32px;
+    position: absolute;
+    
+}
+.nav-hamburguer_button--open .hamburguer-button-element:nth-child(2){
+    transform: rotate(135deg); transform-origin: 0 10;
+    width: 33px;
+   
+
+}
+
+
+.nav-hamburguer_button--open .hamburguer-button-element:nth-child(3){
+    display: none;
+}
+
+.hamburguer-button-element{
+    background: #333;
+    height: 3px;
+    width: 24px;
+}
+
+/* MAIN */
+
+main{
+    background: var(--blanco-itc);
+    height: 70vh;
+    width: 100%;
+}
+
+main article h1{
+    font-size: 2.5rem;
+    margin: 0 auto;
+}
+
+#loginArticle{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+
+#loginForm{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    width: 80%;
+}
+
+#loginForm label span{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#userDni{
+    font-size: 1rem;
+    height: 50px;
+    margin: 0 auto;
+    width: 100%;
+    outline: none;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+#loginForm button{
+    margin: 0 auto;
+    width: 100%;
+    height: 50px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    background-color: steelblue;
+    color: #fafafa;
+
+}
+
+/* 
+main article :nth-child(2), main article :nth-child(4){
+    font-size: 2rem;
+    font-weight: 900;
+    color: #000;
+    background: #fff;
+    mix-blend-mode: multiply;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+}
+main article :nth-child(2)::before, main article :nth-child(4)::before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 80%;
+    background: linear-gradient(to right, rgb(16, 60, 236), rgb(56, 175, 239));
+    mix-blend-mode: screen; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: none;
+} */
+
+
+/* MODAL ERROR */
+
+.modal-error--inactive{
+    display: none;
+}
+
+.modal-error--active{
+    background: #ebebeb;
+    border-radius: 3%;
+    box-shadow: 0.5px 1.5px 5px #f5f2f2;
+    margin: 20% auto;
+    width: 80%;
+    height: 40vh;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.modal-error--active p{
+    font-size: 1.2rem;
+    line-height: 1.3;
+}
+
+#modal-error-header{
+    text-align: right;
+    width: 100%;
+    padding: 0.5rem;
+    display: block;
+}
+
+.modal-error--active figure{
+    width: 50px;
+    margin: 0 auto;
+}
+
+
+.modal-menu--inactive{
+
+    display: none;
+    animation: slideOut;
+    animation-duration: 1s;
+
+}
+
+
+@keyframes slideOut {
+    0%{
+        height: 80vh;
+    }
+    100%{
+        height: 0vh;
+    }
+}
+
+.modal-menu--active{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0.1px 1px 5px;
+    
+    height: 80vh;
+    position: absolute;
+    top: 85px;
+ 
+    z-index: 10;
+    width: 100%;
+
+    animation-name: slideIn;
+    animation-duration: 0.5s;
+    
+
+}
+
+@keyframes slideIn {
+    0%{
+        height: 0px;
+    }
+
+    100%{
+        height: 80vh;
+    }
+}
+
+
+.modal-menu--active p{
+    background: rgba(128, 128, 128, 0.168);
+    height: 65px;
+    width: 70%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    font-size: 1.5rem;
+    color: rgb(39, 39, 245);
+}
+
+
+
+/*********** MODALES ****************/
+
+/* COUNTER section */
+
+.counter{
+    height: 80vh;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: rgb(248, 239, 237);
+    padding: 1rem;
+}
+
+.counter article p:first-of-type{
+    font-size: 1rem;
+    line-height: 3;
+}
+
+.counter article p{
+    font-size: 2rem;
+    font-weight: 900;
+    color: #333;
+}
+
+#cuenta{
+    height: 250px;
+    background-color: rgb(33, 119, 218);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0px 10px 7px 0px rgba(0,0,0,0.1);
+}
+
+#cuenta h1{
+    font-size: 2rem;
+    color: #fafafa;
+}
+
+.simply-section div{
+    background-color: rgb(13, 90, 197);
+    border-radius:5%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+
+}
+
+#amount{
+    font-size: 5rem;
+    color: rgb(255, 255, 255);
+    font-weight: 900;
+}
+
+.simply-amount{
+    font-size: 5rem;
+    color: rgb(255, 255, 255);
+    font-weight: 900;
+    display: none;
+}
+
+.simply-days-section div .simply-word{
+    font-size: 3rem;
+    color: white;
+    font-weight: 700;
+}
+
+.simply-hours-section, .simply-minutes-section, .simply-seconds-section{
+    display: none;
+}
+
+
+/* INFO USER */
+

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recordatorio Inicio de Clases</title>
+</head>
+<body>
+    <header>
+        <figure>
+            <img src="https://i.postimg.cc/y6QCB9fw/Logo-Original-2.png" alt="logo itc">
+        </figure>
+        <nav>
+            <div class="nav-hamburguer_button--closed">
+                <div class="hamburguer-button-element"></div>
+                <div class="hamburguer-button-element"></div>
+                <div class="hamburguer-button-element"></div>
+            </div>
+
+            <ul>
+                <li><a href="">About me</a></li>
+                <li><a href="">My Work</a></li>
+                <li><a href="">Let's work together</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main" class="">
+
+        
+        <article id="loginArticle">
+            <h1>¡Bienvenido!</h1>
+            <form id="loginForm" onsubmit="login()">
+                <label for="dni"> <span>Ingrese su número de documento para acceder al panel de su curso. <br></span>  (sin espacios ni puntos):</label>
+                <input id="userDni" name="dni" type="number" placeholder="Ej: 27335664">
+                <button type="button" onclick="login()">Ingresar</button>
+            </form>
+            
+        </article>
+
+    </main>
+
+    <div id="modal-menu" class="modal-menu--inactive">
+        <p> <a href="#faqs" id="faqButton">Preguntas Frecuentes</a> </p>
+        <p> <a href="#login" id="loginButton">Ingresar</a> </p>
+        <p><a href="#material" id="materialButton">Material Didactico</a></p>
+        <p><a href="#contact" id="contactButton">Contacto</a></p>
+    </div>
+    <div id="modal-error" class="modal-error--inactive">
+        <header id="modal-error-header" class="modal-error-header"> <h2 id="modal-error-x">x</h2> </header>
+        <p>El numero de documento ingresado no es válido. Puedes intentar nuevamente o pedir ayuda a nuestro soporte
+        </p>
+        <figure>
+            <a href=""><img src="./assets/WhatsApp.svg" alt="icono de whatsapp"></a>
+        </figure>
+    </div>
+
+    <section id="counter"  class="counter">
+        <article>
+            <p>Tu primer clase es el día:</p>
+            <p id="fechaDeInicio">LUNES 5 de JUNIO</p>
+        </article>
+        <div id="cuenta">
+            <h1>FALTAN</h1>
+            <div id="amount"></div>
+        </div>
+
+    </section>
+
+    <section id="infoUser" class="">
+        <h2>Tus datos:</h2>
+        <p>Nombre y apellido: <span id="dataName"></span> </p>
+        <p>Capacitación: <span id="dataCourse"></span> </p>
+        <p>Dia de cursada: <span id="dataDay"></span> </p>
+        <p>Horario de cursada: <span id="dataHour"></span> </p>
+        <p>Fecha de inicio: <span id="dataDate"></span> </p>
+        <p>Plan de pago: <span id="dataPayment"></span> </p>
+        <p>Importe de la cuota: $<span id="dataValue"></span> </p>
+    </section>
+
+    <section id="faqSection"  class="">
+        
+        <h1>Preguntas Frecuentes:</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores facere perspiciatis reiciendis aperiam, nulla id a veniam numquam dolor explicabo facilis. Nobis reprehenderit ut ad laudantium deserunt, fugiat in tempora.</p>
+        
+    </section>
+    <section id="ubicacion" class="">
+        aqui va el mapa
+    </section>
+    <script src="./simplyCountdown.min.js"></script>
+    <script src="./main.js"></script>
+    <script src="./login.js"></script>
+</body>
+</html>
